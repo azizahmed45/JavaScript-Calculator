@@ -3,4 +3,4 @@
 This is a simple JavaScript Calculator. Its made with basic html css and javascript. 
 It was a practice of css (mainly flexbox).
 
-![Screenshot 1](screenshtos/screenshot-1.png?raw=true "Screenshot")
+![Screenshot 1](screenshots/screenshot-1.png?raw=true "Screenshot")
