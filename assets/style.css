@@ -59,7 +59,7 @@ body {
 }
 
 .display {
-	direction: rtl;
+	text-align: right;
 	flex-grow: 4;
 	height: 80px;
 	background-color: #5a6074;
@@ -68,6 +68,7 @@ body {
 	font-family: monospace;
 	font-size: 30px;
 	color: #fafafa;
+	line-height: 80px;
 }
 
 .display h1 {
