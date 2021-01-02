@@ -35,7 +35,7 @@ function getInput(event) {
 			display();
 		} else if (input === 'equal') {
 			calculate();
-			clear();
+			clearCurrent();
 		} else if (input === 'delete') {
 			del();
 			display();
