@@ -8,7 +8,6 @@ var currentOperator = '';
 document.addEventListener('keydown', handleKeyPress);
 
 function handleKeyPress(event){
-	console.log(event.key);
 
 	if(event.key === '+'){
 		getInput('plus');
