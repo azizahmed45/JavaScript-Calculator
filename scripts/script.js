@@ -4,12 +4,47 @@ var previousNumber = '';
 var currentNumber = '';
 var currentOperator = '';
 
+//keyboard based
+document.addEventListener('keydown', handleKeyPress);
+
+function handleKeyPress(event){
+	console.log(event.key);
+
+	if(event.key === '+'){
+		getInput('plus');
+	} else if(event.key === '-'){
+		getInput('minus');
+	} else if(event.key === '*'){
+		getInput('multiply');
+	} else if(event.key === '/'){
+		getInput('divide');
+	} else if(event.key === '.'){
+		getInput('point');
+	} else if(event.key === '%'){
+		getInput('percent');
+	}else if(event.key === '=' || event.key == 'Enter'){
+		getInput('equal');
+	}else if(event.key === 'Backspace' || event.key === 'Delete'){
+		getInput('delete');
+	} else if(event.key === 'Escape'){
+		getInput('clear');
+	}
+
+	getInput(event.key);
+
+}
+
+
+//button based
 allButtons.forEach((button) => {
-	button.addEventListener('click', getInput);
+	button.addEventListener('click', handleButtonPress);
 });
 
-function getInput(event) {
-	var input = event.target.id;
+function handleButtonPress(event){
+	getInput(event.target.id);
+}
+
+function getInput(input) {
 
 	if (!isNaN(input)) {
 		currentNumber = currentNumber + input;
