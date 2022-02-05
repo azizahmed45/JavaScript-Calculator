@@ -8,7 +8,6 @@ var currentOperator = '';
 document.addEventListener('keydown', handleKeyPress);
 
 function handleKeyPress(event){
-
 	if(event.key === '+'){
 		getInput('plus');
 	} else if(event.key === '-'){
@@ -44,6 +43,7 @@ function handleButtonPress(event){
 }
 
 function getInput(input) {
+	playAudio();
 
 	if (!isNaN(input)) {
 		currentNumber = currentNumber + input;
@@ -120,4 +120,10 @@ function clear() {
 	previousNumber = '';
 	currentNumber = '';
 	currentOperator = '';
+}
+
+
+function playAudio(){
+	var audio = new Audio('../assets/key-press.wav');
+	audio.play();
 }
